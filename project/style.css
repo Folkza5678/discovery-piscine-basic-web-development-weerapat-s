@@ -1,0 +1,111 @@
+/* Background */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #e6e6e6; /* สีเทาอ่อน */
+}
+
+/* Top Menu */
+.top-bar {
+  background-color: #d0d0d0;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+/* Profile Cards */
+.profile-card {
+  background: white;
+  width: 400px;
+  margin: 120px auto 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.info p {
+  margin: 6px 0;
+}
+
+/* ปุ่มลิงก์ */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+/* ส่วนข้อมูลหน้า details */
+.detail-container {
+  margin-top: 120px;
+  text-align: center;
+  padding: 20px;
+  background: white;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* ส่วนประสบการณ์และคอนแทกต์ */
+.section {
+  max-width: 600px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.section h3 {
+  margin-top: 0;
+}
