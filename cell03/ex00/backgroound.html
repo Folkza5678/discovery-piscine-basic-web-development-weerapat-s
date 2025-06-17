@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background Example</title>
+    <style>
+        body {
+          translate: background-color 0.5s 
+          text-align: center;
+         padding: 100px;
+          font-family: Arial, sans-serif;
+        }
+        <button>
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: <div id="ffffff"></div>
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        </style>
+</head>  
+<body>
+    <h1>Change Background Color</h1>
+    <button onclick="changeBackgroundColor()">Click Me!</button>
+
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = 
+                '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+    </script>
+</body>
+</html>
+
