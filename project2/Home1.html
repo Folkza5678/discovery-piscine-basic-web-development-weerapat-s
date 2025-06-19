@@ -2,169 +2,152 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>เพจ 3 สไลด์ พร้อมเมนู</title>
+  <title>phakkatorn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="เว็บเพจแบบเรียบง่ายพร้อมเมนูลัดและสไลด์เนื้อหา">
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: 'Kanit', sans-serif;
-      background: #fefefe;
-      color: #333;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #c9c9c9;
     }
-
-    nav.navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #0097a7;
+    .navbar {
+      width: 100%;
+      background: #fa4981;
       display: flex;
       justify-content: center;
-      gap: 24px;
-      padding: 14px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      gap: 32px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px #828282;
     }
-
     .navbar a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
-      padding: 10px 16px;
-      font-weight: 600;
-      border-radius: 6px;
+      padding: 18px 28px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      border-radius: 0 0 12px 12px;
       transition: background 0.2s, color 0.2s;
+      display: block;
     }
-
-    .navbar a:hover {
-      background: #4ddce1;
-      color: #004d4d;
-    }
-
-    .slide {
-      max-width: 900px;
-      margin: 60px auto;
+    .navbar a:hover, .navbar a:focus {
       background: #ffffff;
+      color: #fa4981;
+    }
+    .slide {
+      display: flex;
+      flex-direction: column;  
+      align-items: center;      
+      min-height: 80vh;
+      background: #ffffff00;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #00000030;
+      margin: 40px auto;
+      max-width: 1250px;
       padding: 48px 24px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       scroll-margin-top: 80px;
     }
-
-    .slide1 { background: #e0f7fa; }
-    .slide2 { background: #f1f8e9; }
-    .slide3 { background: #fce4ec; }
-
-    .content-box {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
+    .slide1 { background: rgb(255, 255, 255); }
+    .slide2 { background: rgb(255, 255, 255); }
+    .slide3 { background: rgb(255, 255, 255); }
+    .slide h2 {
+      margin-top: 10px;
+      color: #E94E77;
+      font-size:  2rem;
+      margin-bottom: 10px;
     }
-
-    .image-container img {
-      border-radius: 50%;
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .slide p {
+      font-size: 1.4rem;
+      color: #003366;
+      text-align: left;
+      max-width: 90%;
     }
-
-    .text-container {
-      flex: 1 1 250px;
+    .slide h4 {
+      margin-top: 0;
+      color: #003366;
+      font-size: 1.7rem;
+      margin-bottom: 8px;
     }
-
-    .faculty-image {
-      margin-top: 30px;
-      text-align: center;
+    .slide h5 {
+      margin-top: 0;
+      color: #003366;
+      font-size: 1.4rem;
+      margin-bottom: 36px;
     }
-
-    .faculty-image img {
-      max-width: 100%;
-      width: 500px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .slide img { 
+  margin-top: 0px;
     }
-
-    h1, h2 {
-      color: #00838f;
-      margin-bottom: 16px;
+    .slide h3 {
+      margin-top: 0px;
+      color: #E94E77;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
     }
+.contact-title {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
 
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-    }
+.contact-img-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.special-font {
+  font-family: 'Noto Sans Thai', sans-serif;
+}
 
     @media (max-width: 700px) {
       .navbar {
-        gap: 10px;
-        flex-wrap: wrap;
-        padding: 12px;
+        gap: 8px;
       }
-
+      .navbar a {
+        padding: 12px 8px;
+        font-size: 1rem;
+      }
       .slide {
-        padding: 32px 16px;
-        margin: 40px 12px;
+        padding: 24px 4vw;
+        margin: 24px 0;
       }
-
-      .content-box {
-        flex-direction: column;
-        text-align: center;
+      .slide h2 {
+        font-size: 1.3rem;
       }
-
-      .text-container {
-        text-align: center;
-      }
-
-      .faculty-image img {
-        width: 100%;
-        height: auto;
+      .slide p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
-
 <body>
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="#slide1">Profile</a>
-    <a href="#slide2">สไลด์ 2</a>
-    <a href="#slide3">Contact</a>
+    <a href="index.html">HOME</a>
+    <a href="#slide1">GROUP</a>
+    <a href="#slide2">HISTORY</a>
+    <a href="#slide3">CONTACT</a>
   </nav>
-
-  <section class="slide slide1" id="slide1">
-    <div class="content-box">
-      <div class="image-container">
-        <img src="image.png" alt="โปรไฟล์">
-      </div>
-      <div class="text-container">
-        <h1>Profile</h1>
-        <p>ชื่อ: ......</p>
-        <p>คณะ: ครุศาสตร์อุตสาหกรรมและเทคโนโลยี สาขาเทคโนโลยีคอมพิวเตอร์</p>
-      </div>
-    </div>
-    <div class="faculty-image">
-      <img src="site.png" alt="คณะ">
-    </div>
-  </section>
-
-  <section class="slide slide2" id="slide2">
-    <h2>สไลด์ที่ 2</h2>
-    <p>ในสไลด์นี้ เราจะพูดถึงเทคโนโลยีที่น่าจับตามอง เช่น AI, Blockchain และ Internet of Things (IoT)</p>
-    <p>การเรียนรู้และเข้าใจเทคโนโลยีใหม่ ๆ จะเป็นทักษะสำคัญสำหรับอนาคต</p>
-  </section>
-
-  <section class="slide slide3" id="slide3">
-    <h2>Contact</h2>
-    <p>ขอบคุณที่เข้ามาชมเว็บเพจของผมครับ</p>
-    <p>หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่อีเมล <a href="https://www.facebook.com/"><strong>https://www.facebook.com/</strong></a></p>
-    <p>หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่อีเมล <a href="https://www.instagram.com/"><strong>https://www.instagram.com/_f0lqq?igsh=MTV5YjZnNmhyMXFzaQ==</strong></a></p>
-    <p>หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่อีเมล <a href="https://www.facebook.com/"><strong>https://www.facebook.com/</strong></a></p>
-  </section>
+  <div class="slide slide1" id="slide1">
+    <img src="https://siet.kmitl.ac.th/sites/siet/files/2024-12/logo.png"width="550">
+    <h2>SCHOOL OF INDUSTRIAL EDUCATION AND TECHNOLOGY</h2>
+    <h3>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</h3>
+    <h4>ภาควิชาครุศาสตร์วิศวกรรม</h4>
+    <h5>ค.อ.บ. เทคโนโลยีคอมพิวเตอร์</h5>
+    <img src="https://siet.kmitl.ac.th/sites/siet/files/styles/card_cover/public/2023-10/BOY_0425_0.jpg?itok=mqN9sb8p" width="600" > 
+  </div>
+  <div class="slide slide2" id="slide2">
+    <h2>HISTORY OF SCHOOL OF INDUSTRIAL EDUCATION AND TECHNOLOGY</h2>
+    <img src="https://www.kmitl.ac.th/sites/default/files/2021-09/20201026_154013-scaled-oz0v68dlcjyo3qbnu9wkt6lqwhwtig1cm8wavuhbxq.jpg" width="450" > 
+    <p class="special-font">คณะครุศาสตร์อุตสาหกรรม สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง จัดตั้งขึ้นเมื่อวันที่ 10 พฤศจิกายน พ.ศ.2520 ด้วยความคิดริเริ่มของ ศาสตราจารย์ ดร.วิทยา เพียรวิจิตร รองอธิการบดีสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ศาสตราจารย์ประสม รังสิโรจน์ คณบดีคณะสถาปัตยกรรมศาสตร์ และรองศาสตราจารย์ ดร.โกศล เพ็ชร์สุวรรรณ์ คณบดีคณะวิศวกรรมศาสตร์ (ตำแหน่งในขณะนั้น) ที่จะให้สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร เป็นศูนย์กลางการศึกษาที่สมบูรณ์ตามวัตถุประสงค์ของสถาบันที่ว่า สถาบันเทคโนโลยีพระจอมเกล้าเป็นสถาบันการศึกษาและวิจัยมีวัตถุประสงค์ที่จะผลิตครูอาชีวศึกษาระดับปริญญาตรีให้การศึกษาและวิจัยทางเทคโนโลยีและวิทยาศาสตร์</p>
+  </div>
+<div class="slide slide3" id="slide3">
+  <h2 class="contact-title">CONTACT</h2>
+  <div class="contact-img-wrap">
+    <img src="https://scontent-sin11-1.xx.fbcdn.net/v/t39.30808-6/295106988_3240640866256335_7642986828880490706_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG9etoIcX2bbjKX9lrPxK_3Ov00bfzvoic6_TRt_O-iJzIM2zJxnypl9h9jKUz2otRsQPD6QN8XaH6neNvev6iS&_nc_ohc=GgOKQOf7e7IQ7kNvwGsQOBB&_nc_oc=Adnq8BtOSc_thyTEJgGHcOBg6xtrFdYUdhZ-XKgZFpc6Doc_KVTc3eEO9DmdhWNF_Yc&_nc_zt=23&_nc_ht=scontent-sin11-1.xx&_nc_gid=k4c02f5qNQK-rp7_2QaFJg&oh=00_AfPj2bJML3JptoJAIxrBo00nBhkakSYiqrBbw8RCGGWObA&oe=68596758" width="250"
+         alt="Contact" class="contact-img">
+  </div>
+  <a href="https://www.facebook.com/folkzazz" target="_blank">Facebook : Phakkatorn Sribungngaw</a>
+  <a href="https://www.instagram.com/_f0lqq/" target="_blank">Instagram : _f0lqq</a>
+</div>
 </body>
 </html>
